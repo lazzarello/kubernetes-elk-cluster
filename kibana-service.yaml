@@ -7,11 +7,12 @@ metadata:
     component: elk
     role: kibana
 spec:
+  type: NodePort
   selector:
     component: elk
     role: kibana
   ports:
   - name: http
-    port: 80
-    targetPort: 5601
+    port: 5601
+    nodePort: 30901
     protocol: TCP
